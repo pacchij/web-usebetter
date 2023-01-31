@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome Use Better</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.16.0/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.16.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.16.0/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/9.16.0/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.16.0/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/9.16.0/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/9.16.0/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/9.16.0/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/9.16.0/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/9.16.0/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="message">
+      <h2>Use Better</h2>
+      <h1>Coming Soon...</h1>
+      <p>Hello People! What do you do when you need a plumbing tool or a party table or an accent chair for one time use? That's right, for most of us, the first choice is to buy from online shopping websites or rent from a local store if it is available. That makes sense in most cases. However, your friendly neighbor might have a very similar item lying in their garage, waiting to be used a second time. Honestly, how many of us buy stuff but do not use it regularly? Our garages and homes are filled with lots of one time or rarely used items. 
+
+        Is there any way to make use of these items better? Well we all know, one way is to get rid of them by selling. But if we do not want to sell but use it in a better way by sharing it with your fellow neighbor or trusted friends? You make this planet a better place by reusing items as much as possible. This is no different from our ancestors who used to share items when they were living in closed groups. 
+        
+        Use Better is a mobile app that will help you to share your household items with your neighbors and friends in a safe and secure manner. You can easily publish your items to your friends. You can also easily discover your friends' items. All you need is to see the "Use Better" app if it has been shared by your friends, before buying it. If you already bought an item, use it better by sharing with your neighbors and friends such as ladders, party tables, chairs, tools.
+        </p>
+      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    </div>
+    <p id="load">Firebase SDK Loading&hellip;</p>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
+</html>
